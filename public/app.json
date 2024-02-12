@@ -1,0 +1,107 @@
+{
+    "runtime": {
+        "arguments": "--v=1 --inspect",
+        "version0": "20.91.61.14",
+        "version1": "22.94.65.4",
+        "version3": "30.110.74.16",
+        "version4": "stable",
+        "version": "stable"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "Openfin Bare Bones",
+        "icon": "https://openfin.github.io/golden-prototype/favicon.ico",
+        "name": "Openfin platform bare bones example"
+    },
+    "platform": {
+        "uuid": "platform_fdc3_example",
+        "applicationIcon": "https://openfin.github.io/golden-prototype/favicon.ico",
+        "contextMenu": true,
+        "interopBrokerConfiguration": {
+            "contextGroups": [
+                {
+                    "id": "green",
+                    "displayMetadata": {
+                        "color": "#00CC88",
+                        "name": "green"
+                    }
+                },
+                {
+                    "id": "purple",
+                    "displayMetadata": {
+                        "color": "#8C61FF",
+                        "name": "purple"
+                    }
+                }
+            ]
+        },
+        "defaultWindowOptions": {
+            "fdc3InteropApi": "1.2",
+            "contextMenu": true,
+            "cornerRounding": {
+                "height": 10,
+                "width":10
+            }
+        },
+        "defaultViewOptions": {
+            "fdc3InteropApi": "1.2",
+            "preloadScripts": [
+                {"url":"http://localhost:5555/js/preload.js"}
+            ]
+        }
+    },
+    "snapshot": {
+        "windows": [
+            {
+                "defaultWidth": 600,
+                "defaultHeight": 800,
+                "layout": {
+                    "content": [
+                        {
+                            "type": "stack",
+                            "id": "provider",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "provider_component",
+                                        "processAffinity": "ps_1",
+                                        "preloadScripts": [
+                                            {"url":"http://localhost:5555/js/preload2.js"}
+                                        ],
+                                        "url": "http://localhost:5555/provider.html"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "defaultWidth": 600,
+                "defaultHeight": 800,
+                "includeInSnapshots":false,
+                "layout": {
+                    "content": [
+                        {
+                            "type": "stack",
+                            "id": "client_1",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "client_component_1",
+                                        "processAffinity": "ps_1",
+                                        "url": "http://localhost:5555/index.html"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

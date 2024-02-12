@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client View</title>
+</head>
+<body>
+    <h1 style="color:wheat">client</h1>
+    <button onclick="clickHandler()">Redirect</button>
+    <script>
+        function clickHandler() {
+            location.href = 'http://localhost:5555/client2.html';
+        }
+    </script>
+    <!--script>
+        var count = 0;
+        fin.desktop.main(async () => {
+            const client = await fin.InterApplicationBus.Channel.connect("channel");
+            client.register('count', () => count++)
+            const result = await client.dispatch("sum", { x: 1, y: 2 });
+            console.log('1 + 2 = ' +result);
+        })
+
+    </script-->
+</body>
+</html>
